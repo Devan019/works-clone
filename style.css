@@ -1,0 +1,210 @@
+@font-face{
+    font-family: "freight-big-pro";
+    src : url("./l")
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+    
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+#yellow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background: #F5E41B;
+}
+
+#page1{
+    height: 100vh;
+    background: #F5E41B;
+    position: relative;
+    overflow: auto;
+}
+#page1 #mid p{
+    position: absolute; 
+     top: 27%;
+    text-align: center;
+    left: 15%;
+    font-size: 6vw;
+    font-weight: lighter;
+    line-height: 10vh;
+    z-index: 10;
+    font-family: "freight-big-pro";
+}
+#mid p span{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    position: absolute;
+    top:0;
+    font-weight: bolder;
+    text-transform: uppercase;
+    z-index: 100; 
+    color: white;
+    width: 96%;
+    
+}
+#nav svg{
+    margin-bottom: 20px;
+}
+#nav #part1{
+    font-size: 2vw;
+}
+#nav #part2{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    right: 50px;
+    cursor: pointer;
+}
+#nav #part2 div{
+    font-size: 1.4vw;
+}
+#nav #part2 .hidden{
+    visibility: hidden;
+}
+#nav #part2 img{
+    cursor: pointer;
+    filter: invert(1);
+    padding-left: 10px;
+    position: relative;
+    /* top: 2px; */
+    bottom: 5px;
+    left: 20px;
+    /* right: 5px; */
+}
+#page1 #footer1{
+    display : flex;
+    justify-content: space-between;
+    position:relative;
+    top : 90%;
+}
+#footer1 div{
+    font-size : 3vh;
+    text-transform: uppercase;
+    font-family: "freight-big-pro";
+}
+#footer1 div:nth-child(1){
+    padding-left: 50px;
+}
+#footer1 div:nth-child(3){
+    padding-right: 50px;
+}
+
+
+#page2{
+    height: 100vh;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#page2 #menu .menu-part{
+    color: white;
+    font-family: "freight-big-pro";
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+}
+.newDiv{
+    position: relative;
+    bottom: 6vh;
+    width: 100vw;
+    /* left: 0; */
+}
+#footer2{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+#footer2 svg{
+    fill :white
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+    display : grid;
+    grid-template-columns: repeat(3,minmax(300px,1fr));
+    grid-template-rows: repeat(11 ,minmax(200px,400px));
+}
+.photo-grid{
+    /* height: 50%;
+    width: 30%]; */
+    border: 1px solid;
+    padding: 50px;
+    margin: 25px;
+    position: relative;
+}
+.photo-grid h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+
+}
+
+/* .photo-grid:nth-child(1){
+    grid-row: 1/4;
+}
+.photo-grid:nth-child(2){
+    grid-row: 1/2;
+}
+.photo-grid:nth-child(3){
+
+}
+.photo-grid:nth-child(3){
+    grid-row: 2/5;
+} */
+.photo-grid:hover h2{
+    opacity: 1;
+    z-index: 100;
+    color: white;
+    text-align: center;
+    transition: all 0.5s;
+    font-size: 3vh;
+    text-transform: uppercase;
+    font-family: "freight-big-pro";
+}
+
+.photo-grid:hover{
+    background: #000;
+    z-index: 99;
+    transition: all 0.5s;
+}
